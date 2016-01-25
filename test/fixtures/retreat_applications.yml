@@ -1,0 +1,23 @@
+# == Schema Information
+#
+# Table name: retreat_applications
+#
+#  id         :integer          not null, primary key
+#  person_id  :integer
+#  sesshin_id :integer
+#  status     :string
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  person_id: 1
+  sesshin_id: 1
+  status: MyString
+
+two:
+  person_id: 1
+  sesshin_id: 1
+  status: MyString
