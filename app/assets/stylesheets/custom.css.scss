@@ -3,6 +3,29 @@ $navbar-default-bg: #ffd1b3;
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+body {
+  
+  background-image: asset-url('misty_morning.jpg');
+  background-size: cover;
+
+}
+.jumbotron {
+  height: 550px;
+  opacity: 0.5;
+}
+
+.jumbotron h1 {
+
+}
+
+.center {
+  text-align: center;
+}
+
+img {
+  opacity: 0.2;
+}
+
 #logo {
   float: left;
   color: #000;
