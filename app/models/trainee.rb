@@ -11,7 +11,7 @@
 #
 
 class Trainee < ActiveRecord::Base
-  belongs_to :person
+  belongs_to :user
   belongs_to :sesshin
   has_many :financial_info
   has_many :housing_info
