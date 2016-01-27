@@ -14,4 +14,5 @@
 
 class PersonalInfo < ActiveRecord::Base
   belongs_to :user
+  belongs_to :retreat_application
 end

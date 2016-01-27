@@ -13,4 +13,7 @@
 class RetreatApplication < ActiveRecord::Base
   belongs_to :user
   belongs_to :sesshin
+  has_one :personal_info
+  has_one :housing_info
+  has_one :financial_info
 end
