@@ -1,0 +1,8 @@
+<h2>Sesshin Application</h2>
+
+<%= form_for @retreat_application do |f| %>
+
+    <%= f.fields_for :contact_info do |ff| %>
+      <%= ff.text_field :address %>
+    <% end %>
+<% end %>

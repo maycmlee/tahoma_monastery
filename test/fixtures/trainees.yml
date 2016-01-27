@@ -3,7 +3,7 @@
 # Table name: trainees
 #
 #  id         :integer          not null, primary key
-#  person_id  :integer
+#  user_id    :integer
 #  sesshin_id :integer
 #  fulltime   :boolean
 #  created_at :datetime         not null

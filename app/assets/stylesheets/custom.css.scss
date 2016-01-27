@@ -3,12 +3,12 @@ $navbar-default-bg: #ffd1b3;
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-body {
+background {
   
   background-image: asset-url('misty_morning.jpg');
   background-size: cover;
-
 }
+
 .jumbotron {
   width: 250px;
   height: 150px;

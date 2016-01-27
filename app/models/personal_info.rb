@@ -1,15 +1,17 @@
 # == Schema Information
 #
-# Table name: contact_infos
+# Table name: personal_infos
 #
 #  id         :integer          not null, primary key
-#  person_id  :integer
+#  user_id    :integer
+#  firstname  :string
+#  lastname   :string
 #  address    :string
 #  phone      :string
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
 
-class ContactInfo < ActiveRecord::Base
+class PersonalInfo < ActiveRecord::Base
   belongs_to :user
 end
