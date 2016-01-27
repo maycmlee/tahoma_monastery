@@ -1,4 +1,7 @@
 class RetreatApplicationController < ApplicationController
-  before_filter :autheticate_user!
+  before_filter :authenticate_user!
+
+  def new
+  end
 
 end
