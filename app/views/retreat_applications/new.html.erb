@@ -19,11 +19,9 @@
 
      <h4> Do you require financial aid to be able to attend? </h4>
     <%= f.fields_for :financial_info do |ff| %>
-      <%= ff.label "No" %>
-      <%= ff.check_box :no %>
-      <br />
+
       <%= ff.label "Yes" %>
-      <%= ff.check_box :yes %>
+      <%= ff.check_box :need_aid %>
 
       <%= ff.label "Amount needed:" %>
       <%= ff.number_field :amt_aid_needed %>

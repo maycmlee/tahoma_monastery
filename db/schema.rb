@@ -18,6 +18,8 @@ ActiveRecord::Schema.define(version: 20160126202148) do
 
   create_table "financial_infos", force: :cascade do |t|
     t.integer  "trainee_id"
+    t.integer  "retreat_application_id"
+    t.boolean  "need_aid"
     t.float    "amt_aid_needed"
     t.boolean  "deposit_received"
     t.float    "total_payment_received"
@@ -27,20 +29,22 @@ ActiveRecord::Schema.define(version: 20160126202148) do
 
   create_table "housing_infos", force: :cascade do |t|
     t.integer  "trainee_id"
+    t.integer  "retreat_application_id"
     t.boolean  "need_housing"
     t.boolean  "camping"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
   end
 
   create_table "personal_infos", force: :cascade do |t|
     t.integer  "user_id"
+    t.integer  "retreat_application_id"
     t.string   "firstname"
     t.string   "lastname"
     t.string   "address"
     t.string   "phone"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
   end
 
   create_table "retreat_applications", force: :cascade do |t|
