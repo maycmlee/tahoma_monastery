@@ -4,6 +4,8 @@
 #
 #  id                     :integer          not null, primary key
 #  trainee_id             :integer
+#  retreat_application_id :integer
+#  need_aid               :boolean
 #  amt_aid_needed         :float
 #  deposit_received       :boolean
 #  total_payment_received :float
@@ -13,4 +15,5 @@
 
 class FinancialInfo < ActiveRecord::Base
   belongs_to :trainee
+  belongs_to :retreat_application
 end

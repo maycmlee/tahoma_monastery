@@ -1,7 +1,7 @@
 class CreateRetreatApplications < ActiveRecord::Migration
   def change
     create_table :retreat_applications do |t|
-      t.integer :person_id
+      t.integer :user_id
       t.integer :sesshin_id
       t.string :status
 

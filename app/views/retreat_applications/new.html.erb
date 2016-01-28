@@ -1,0 +1,41 @@
+<h2>Sesshin Application</h2>
+
+<%= form_for @retreat_application do |f| %>
+
+    <%= f.fields_for :personal_info do |ff| %>
+      <%= ff.label "First_Name" %>
+      <%= ff.text_field :firstname %>
+      <br />
+      <%= ff.label "Last_Name" %>
+      <%= ff.text_field :lastname %>
+      <br />
+      <%= ff.label "Telephone" %>
+      <%= ff.text_field :phone %>
+      <br />
+      <%= ff.label "Postal Address" %>
+      <%= ff.text_field :address %>
+      <br /><br />
+    <% end %>
+
+     <h4> Do you require financial aid to be able to attend? </h4>
+    <%= f.fields_for :financial_info do |ff| %>
+
+      <%= ff.label "Yes" %>
+      <%= ff.check_box :need_aid %>
+
+      <%= ff.label "Amount needed:" %>
+      <%= ff.number_field :amt_aid_needed %>
+    <% end %>
+
+    <h4> Do you need housing or would you like to camp? </h4>
+    <%= f.fields_for :housing_info do |ff| %>
+      <%= ff.label "Need Housing" %>
+      <%= ff.check_box :need_housing %>
+      <br />
+      <%= ff.label "Camping" %>
+      <%= ff.check_box :camping %>
+    <% end %>
+  
+  <br />
+  <%= f.submit "Submit Application" %>
+<% end %>

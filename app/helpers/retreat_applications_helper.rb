@@ -1,0 +1,2 @@
+module RetreatApplicationsHelper
+end

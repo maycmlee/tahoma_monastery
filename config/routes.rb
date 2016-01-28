@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
-  devise_for :users
   root 'pages#index'
+  
+  devise_for :users
+  
+  resources :retreat_applications
   get "/:page" => "pages#show"
 
 end

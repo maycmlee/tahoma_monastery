@@ -1,17 +1,19 @@
 # == Schema Information
 #
-# Table name: housing_infos
+# Table name: personal_infos
 #
 #  id                     :integer          not null, primary key
-#  trainee_id             :integer
+#  user_id                :integer
 #  retreat_application_id :integer
-#  need_housing           :boolean
-#  camping                :boolean
+#  firstname              :string
+#  lastname               :string
+#  address                :string
+#  phone                  :string
 #  created_at             :datetime         not null
 #  updated_at             :datetime         not null
 #
 
-class HousingInfo < ActiveRecord::Base
-  belongs_to :trainee
+class PersonalInfo < ActiveRecord::Base
+  belongs_to :user
   belongs_to :retreat_application
 end
