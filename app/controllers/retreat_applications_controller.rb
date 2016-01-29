@@ -17,8 +17,14 @@ class RetreatApplicationsController < ApplicationController
     @housing = @retreat_app.build_housing_info(retreat_app_params[:housing_info_attributes])
     @housing.save
 
-    @retreat_app.save
-    binding.pry
+    @retreat_app.user_id = current_user.id
+    @retreat_app.status = "pending"
+    
+    if @retreat_app.save
+      RetreatAppMailer.app_submitted(@retreat_app).deliver_now
+    else
+      #throw error
+    end 
   end
 
   private
