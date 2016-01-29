@@ -16,6 +16,8 @@ class RetreatApplicationsController < ApplicationController
     @financial.save
     @housing = @retreat_app.build_housing_info(retreat_app_params[:housing_info_attributes])
     @housing.save
+
+    @retreat_app.save
     binding.pry
   end
 
