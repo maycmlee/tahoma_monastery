@@ -4,8 +4,30 @@
     <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
   </head>
   <body>
-    <h1>You have successfully submitted your application, <%= @retreat_app.personal_info.firstname %>!</h1>
+    <h3>You have successfully submitted your application, <%= @retreat_app.personal_info.firstname %>!</h3>
     <p>
+    <h4>Retreat Application</h4>
+
+    First Name: <%= @retreat_app.personal_info.firstname %><br />
+    Last Name: <%= @retreat_app.personal_info.lastname %><br />
+    Telephone: <%= @retreat_app.personal_info.phone %><br />
+    Postal Address: <%= @retreat_app.personal_info.address %><br /><br />
+    
+    Do you need financial aid to attend?
+    <% if @retreat_app.financial_info.need_aid %> <br/>
+      Yes. <br />
+      Amount needed: $<%= @retreat_app.financial_info.amt_aid_needed %><br />
+    <% end %>
+    <br />
+    
+    Do you need housing or would you like to camp? <br />
+    <% if @retreat_app.housing_info.need_housing %>
+      Need housing.
+    <% elsif @retreat_app.housing_info.camping %>
+      Camping.
+    <% else %>
+      You didn't select one, please contact so-and-so about it.
+    <% end %>
 
     <p>Thanks and have a great day!</p>
   </body>
