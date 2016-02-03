@@ -24,7 +24,7 @@
       <%= ff.check_box :need_aid %>
 
       <%= ff.label "Amount needed:" %>
-      <%= ff.number_field :amt_aid_needed %>
+      <%= ff.text_field :amt_aid_needed, :class => 'amt_aid_needed', :value => (number_with_precision(ff.object.amt_aid_needed, :precision => 2) || 0) %>
     <% end %>
 
     <h4> Do you need housing or would you like to camp? </h4>

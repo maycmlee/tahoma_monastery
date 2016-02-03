@@ -1,0 +1,26 @@
+Thanks for submitting your application, <%= @retreat_app.personal_info.firstname %>!
+
+Retreat Application
+
+  First Name: <%= @retreat_app.personal_info.firstname %>
+  Last Name: <%= @retreat_app.personal_info.lastname %>
+  Telephone: <%= @retreat_app.personal_info.phone %>
+  Postal Address: <%= @retreat_app.personal_info.address %>
+  
+  Do you need financial aid to attend?
+  <% if @retreat_app.financial_info.need_aid %>
+    Yes. 
+    Amount needed: $<%= @retreat_app.financial_info.amt_aid_needed %>
+  <% end %>
+  
+  Do you need housing or would you like to camp?
+  <% if @retreat_app.housing_info.need_housing %>
+    Need housing.
+  <% elsif @retreat_app.housing_info.camping %>
+    Camping.
+  <% else %>
+    You didn't select one, please contact so-and-so about it.
+  <% end %>
+
+
+Thanks and have a great day!
