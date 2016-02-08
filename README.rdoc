@@ -2,4 +2,4 @@
 
 This project is to allow people to apply for retreats online once they sign up on the site.
 
-All the user and application details will be stored in the database.  Applicants will then be able to access their accounts to see the status of their application.
+When the user submits their online application they will receive an email confirmation and a copy of their application.  All the user and application details are stored in the database.  Applicants will then be able to access their accounts to see the status of their application.
