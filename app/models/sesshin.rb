@@ -11,7 +11,7 @@
 
 class Sesshin < ActiveRecord::Base
   has_many :retreat_applications
-  has_many :people, through: :retreat_applications
+  has_many :users, through: :retreat_applications
   has_many :trainees
   has_many :financial_infos, through: :trainees
   has_many :housing_infos, through: :trainees
