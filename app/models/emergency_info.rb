@@ -13,4 +13,6 @@
 #
 
 class EmergencyInfo < ActiveRecord::Base
+  belongs_to :trainee
+  belongs_to :retreat_application
 end

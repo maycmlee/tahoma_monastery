@@ -15,4 +15,5 @@ class Trainee < ActiveRecord::Base
   belongs_to :sesshin
   has_many :financial_info
   has_many :housing_info
+  has_many :emergency_info
 end
