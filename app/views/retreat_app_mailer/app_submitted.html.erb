@@ -26,8 +26,13 @@
     <% elsif @retreat_app.housing_info.camping %>
       Camping.
     <% else %>
-      You didn't select one, please contact so-and-so about it.
+      You didn't select one, please contact so-and-so about it.<br />
     <% end %>
+
+    Emergency Contact Information <br />
+    Contact Name: <%= @retreat_app.emergency_info.emergency_contact_name %><br />
+    Contact Phone Number: <%= @retreat_app.emergency_info.emergency_contact_phone %><br />
+    Relationship: <%= @retreat_app.emergency_info.emergency_contact_relationship %><br />
 
     <p>Thanks and have a great day!</p>
   </body>
