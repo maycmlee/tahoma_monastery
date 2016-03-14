@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  emergency_contact_name: MyString
+  emergency_contact_phone: MyString
+  emergency_contact_relationship: MyString
+
+two:
+  emergency_contact_name: MyString
+  emergency_contact_phone: MyString
+  emergency_contact_relationship: MyString
