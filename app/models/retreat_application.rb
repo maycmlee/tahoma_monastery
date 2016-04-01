@@ -17,5 +17,6 @@ class RetreatApplication < ActiveRecord::Base
   has_one :housing_info
   has_one :financial_info
   has_one :emergency_info
+  has_one :medical_info
   accepts_nested_attributes_for :personal_info, :housing_info, :financial_info, :emergency_info
 end
