@@ -29,11 +29,11 @@
 
     <h4> Do you need housing or would you like to camp? </h4>
     <%= f.fields_for :housing_info do |ff| %>
-      <%= ff.label "Need Housing" %>
       <%= ff.check_box :need_housing %>
+      Need Housing
       <br />
-      <%= ff.label "Camping" %>
       <%= ff.check_box :camping %>
+      Camping
     <% end %>
 
     <h4> Emergency Contact Information</h4>
@@ -48,6 +48,27 @@
         <%= ff.text_field :emergency_contact_relationship %>
       <% end %>
 
+    <h4> Medical Information</h4>
+      <%= f.fields_for :medical_info do |ff| %>
+        Do you have special needs or medical considerations?
+        <br />
+        <%= ff.check_box :special_medical_needs %>
+        Yes
+        <br />
+        Please specifiy:
+        <br />
+        <%= ff.text_area :medical_needs_note %>
+        <br />
+        Any serious allergies?
+        <br />
+        <%= ff.check_box :serious_allergies %>
+        Yes
+        <br />
+        Please specifiy:
+        <br />
+        <%= ff.text_area :allergies_note %>
+        <br />
+      <% end %>
   
   <br />
   <%= f.submit "Submit Application" %>
