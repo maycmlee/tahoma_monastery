@@ -11,14 +11,14 @@ class RetreatApplicationsController < ApplicationController
 
   def create
     @retreat_app = RetreatApplication.create(retreat_app_params)
-    @personal = @retreat_app.build_personal_info(retreat_app_params[:personal_info_attributes])
-    @personal.save
-    @financial = @retreat_app.build_financial_info(retreat_app_params[:financial_info_attributes])
-    @financial.save
-    @housing = @retreat_app.build_housing_info(retreat_app_params[:housing_info_attributes])
-    @housing.save
-    @emergency = @retreat_app.build_emergency_info(retreat_app_params[:emergency_info_attributes])
-    @emergency.save
+    # @personal = @retreat_app.build_personal_info(retreat_app_params[:personal_info_attributes])
+    # @personal.save
+    # @financial = @retreat_app.build_financial_info(retreat_app_params[:financial_info_attributes])
+    # @financial.save
+    # @housing = @retreat_app.build_housing_info(retreat_app_params[:housing_info_attributes])
+    # @housing.save
+    # @emergency = @retreat_app.build_emergency_info(retreat_app_params[:emergency_info_attributes])
+    # @emergency.save
 
     @retreat_app.user_id = current_user.id
     @retreat_app.status = "pending"
