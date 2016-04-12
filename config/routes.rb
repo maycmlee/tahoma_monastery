@@ -1,12 +1,14 @@
 Rails.application.routes.draw do
-  devise_for :admins
+  devise_for :admins, controllers: { 
+    sessions: "admins/sessions" 
+  }
 
   root 'pages#index'
   
   devise_for :users
   
   resources :retreat_applications
-
+  get "admin/" => "admins#index"
   get "/about" => "pages#about"
   get "/calendar" => "pages#calendar"
   # get "/:page" => "pages#show"
