@@ -7,7 +7,7 @@ Rails.application.routes.draw do
     registrations: "admins/registrations"
   }
 
-  get "admins/dashboard" => "admins#dashboard"
+  get "admins/dashboard" => "admins_dashboard#dashboard"
 
 
   # get "admins/dashboard" => "pages#dashboard"
@@ -15,7 +15,7 @@ Rails.application.routes.draw do
   devise_for :users
   
   resources :retreat_applications
-  get "admin/" => "admins#index"
+  get "admin/" => "admins_dashboard#index"
   get "/about" => "pages#about"
   get "/calendar" => "pages#calendar"
   # get "/:page" => "pages#show"
