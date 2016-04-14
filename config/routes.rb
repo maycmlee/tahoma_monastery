@@ -7,7 +7,10 @@ Rails.application.routes.draw do
     registrations: "admins/registrations"
   }
 
-  get "admins/dashboard" => "pages#dashboard"
+  get "admins/dashboard" => "admins#dashboard"
+
+
+  # get "admins/dashboard" => "pages#dashboard"
   
   devise_for :users
   

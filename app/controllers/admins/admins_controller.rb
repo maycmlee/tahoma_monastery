@@ -1,3 +1,0 @@
-def PagesController < ApplicationController
-
-end
