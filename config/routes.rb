@@ -1,9 +1,16 @@
 Rails.application.routes.draw do
-  devise_for :admins, controllers: { 
-    sessions: "admins/sessions" 
-  }
 
   root 'pages#index'
+  
+  devise_for :admins, controllers: { 
+    sessions: "admins/sessions",
+    registrations: "admins/registrations"
+  }
+
+  get "admins/dashboard" => "admins#dashboard"
+
+
+  # get "admins/dashboard" => "pages#dashboard"
   
   devise_for :users
   
