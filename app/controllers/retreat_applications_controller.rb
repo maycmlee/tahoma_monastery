@@ -30,6 +30,14 @@ class RetreatApplicationsController < ApplicationController
     end 
   end
 
+  def show
+    binding.pry
+  end
+
+  def update
+
+  end
+
   private
     def retreat_app_params
       params.require(:retreat_application).permit(personal_info_attributes: [:firstname, :lastname, :address, :phone],
