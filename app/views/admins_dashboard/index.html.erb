@@ -8,7 +8,7 @@
     </ul>
   <% end %> 
 
-<h3><%= link_to "All accepted applicants", admins_dashboard_path %></h3>
+<h3><%= link_to "Accepted applicants", admins_dashboard_path %></h3>
   <% @retreatapplications.each do |application| %>
     <ul>
     <% if application.status == "accepted" %>
@@ -18,7 +18,7 @@
     </ul>
   <% end %> 
 
-<h3><%= link_to "All rejected applicants", admins_dashboard_path %></h3>
+<h3><%= link_to "Rejected applicants", admins_dashboard_path %></h3>
   <% @retreatapplications.each do |application| %>
     <ul>
     <% if application.status == "rejected" %>
@@ -28,7 +28,7 @@
     </ul>
   <% end %> 
 
-<h3><%= link_to "All pending applicants", admins_dashboard_path %></h3>
+<h3><%= link_to "Pending applicants", admins_dashboard_path %></h3>
   <% @retreatapplications.each do |application| %>
     <ul>
     <% if application.status == "pending" %>
