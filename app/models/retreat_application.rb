@@ -19,4 +19,9 @@ class RetreatApplication < ActiveRecord::Base
   has_one :emergency_info
   has_one :medical_info
   accepts_nested_attributes_for :personal_info, :housing_info, :financial_info, :emergency_info
+
+  def self.accepted
+    self.where(status: "accepted")
+  end
+  
 end
