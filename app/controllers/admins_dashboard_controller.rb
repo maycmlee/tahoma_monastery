@@ -3,5 +3,6 @@ class AdminsDashboardController < ApplicationController
 
   def index
     @users = User.all
+    @retreatapplications = RetreatApplication.all
   end
 end
