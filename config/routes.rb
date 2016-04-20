@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   }
   devise_for :users
   
-  get "admins/dashboard" => "admins_dashboard#dashboard"
+  get "admins/dashboard" => "admins_dashboard#index"
   resources :admins_dashboard
   resources :retreat_applications
   get "admin/" => "admins_dashboard#index"
