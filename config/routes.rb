@@ -6,14 +6,10 @@ Rails.application.routes.draw do
     sessions: "admins/sessions",
     registrations: "admins/registrations"
   }
-
-  get "admins/dashboard" => "admins_dashboard#dashboard"
-
-
-  # get "admins/dashboard" => "pages#dashboard"
-  
   devise_for :users
   
+  get "admins/dashboard" => "admins_dashboard#dashboard"
+  resources :admins_dashboard
   resources :retreat_applications
   get "admin/" => "admins_dashboard#index"
   get "/about" => "pages#about"
