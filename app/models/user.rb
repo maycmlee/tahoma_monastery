@@ -23,7 +23,7 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  has_one :personal_info
-  has_many :trainees
-  has_many :retreat_applications
+  has_one :personal_info, dependent: :destroy
+  has_many :trainees, dependent: :destroy
+  has_many :retreat_applications, dependent: :destroy
 end
