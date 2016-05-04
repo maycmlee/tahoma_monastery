@@ -30,7 +30,7 @@ class RetreatApplicationsController < ApplicationController
     end 
   end
 
-  def show
+  def edit
     binding.pry
   end
 
